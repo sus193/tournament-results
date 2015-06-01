@@ -2,7 +2,7 @@ P2: Tournament Results
 Description: A Python module that uses the PostgreSQL database to keep track of players and matches in a single Swiss pairings game tournament
 
 Author: Susmita Gorai
-Submission Date: 05/31/2015
+Submission Date: 06/01/2015
 Full Stack Web Developer Nanodegree 
 March '15 Cohort
 
