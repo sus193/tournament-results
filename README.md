@@ -30,3 +30,32 @@ vagrant=>\i tournament.sql;
 #### Part 4: Run the testing suite
 -Exit from psql by entering "\q"
 -Run the test with the command "python tournament_test.py"
+
+## Expected Result:
+vagrant@vagrant-ubuntu-trusty-32:/vagrant/tournament$ psql
+psql (9.3.6)
+Type "help" for help.
+vagrant=> drop database tournament;
+DROP DATABASE
+vagrant=> create database tournament;
+CREATE DATABASE
+vagrant=> \c tournament;
+You are now connected to database "tournament" as user "vagrant".
+tournament=> \i tournament.sql;
+psql:tournament.sql:10: ERROR:  table "players" does not exist
+psql:tournament.sql:11: ERROR:  table "matches" does not exist
+psql:tournament.sql:12: ERROR:  view "matchresults" does not exist
+CREATE TABLE
+CREATE TABLE
+CREATE VIEW
+tournament=> \q
+vagrant@vagrant-ubuntu-trusty-32:/vagrant/tournament$ python tournament_test.py
+1. Old matches can be deleted.
+1. Player records can be deleted.
+1. After deleting, countPlayers() returns zero.
+1. After registering a player, countPlayers() returns 1.
+1. Players can be registered and deleted.
+1. Newly registered players appear in the standings with no matches.
+1. After a match, players have updated standings.
+1. After one match, players with one win are paired.
+Success!  All tests pass!
