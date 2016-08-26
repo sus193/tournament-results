@@ -59,3 +59,16 @@ vagrant@vagrant-ubuntu-trusty-32:/vagrant/tournament$ python tournament_test.py
 7. After a match, players have updated standings.
 8. After one match, players with one win are paired.
 Success!  All tests pass!
+
+## *Note: 
+To test with 8 players uncomment the code inside of the function 
+"testPairings()" where it says "Test for 8 players" and comment out the rest of the testPairings function that tests for 4 players
+
+## Sources:
+1. Udacity's Intro to Relational Databases course for instructions
+1. The fullstack-nanodegree-vm repository for providing code
+1. SQL injection information - http://bobby-tables.com/python.html
+1. General SQL information - http://www.w3schools.com/sql/default.asp
+1. Udacity's Discussion Forum
+1. Python - http://www.tutorialspoint.com/python and https://docs.python.org
+1. PostgreSQL - http://www.postgresql.org/docs/9.1/static/datatype.html
